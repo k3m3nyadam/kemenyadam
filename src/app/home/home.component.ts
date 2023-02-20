@@ -7,6 +7,7 @@ import { AccountService } from '@app/_services/account.service';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
+
 export class HomeComponent {
   user: User;
 

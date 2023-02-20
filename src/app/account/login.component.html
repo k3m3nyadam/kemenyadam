@@ -1,1 +1,36 @@
-<p>login works!</p>
+<div class="card mt-4">
+    <h3 class="card-header">Login</h3>
+    <div class="card-body">
+        <form [formGroup]="form" (onsubmit)="onSubmit()">
+            <div class="mb-3">
+                <label class="form-label">Username</label>
+                <input type="text" class="form-control" formControlName="username"
+                    [ngClass]="{'is-invalid': submitted && g.username.errors}">
+                <div class="invalid-feedback" *ngIf="{'is-invalid': submitted && g.username.errors}">
+                    <div *ngIf="g.username.errors?.required">Please write in your username!</div>
+                </div>
+            </div>
+
+            <br>
+
+            <div class="mb-3">
+                <label class="form-label">Password</label>
+                <input type="password" class="form-control" formControlName="password"
+                    [ngClass]="{'is-invalid': submitted && g.password.errors}">
+                <div class="invalid-feedback" *ngIf="{'is-invalid': submitted && g.password.errors}">
+                    <div *ngIf="g.password.errors?.required">Please write in your password!</div>
+                </div>
+            </div>
+
+            <br>
+
+            <div>
+                <button class="btn btn-1" [disabled]="loading">
+                    <span *ngIf="loading" class="spinner-border spinner-border-sm me-1"></span>
+                    Login
+                </button>
+                <a routerLink="../register" class="btn btn-2">Register</a>
+            </div>
+        </form>
+    </div>
+</div>
