@@ -1,7 +1,7 @@
 <div class="card mt-4">
     <h3 class="card-header">Login</h3>
     <div class="card-body">
-        <form [formGroup]="form" (onsubmit)="onSubmit()">
+        <form [formGroup]="form" (ngSubmit)="onSubmit()">
             <div class="mb-3">
                 <label class="form-label">Username</label>
                 <input type="text" class="form-control" formControlName="username"

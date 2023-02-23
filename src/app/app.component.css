@@ -1,0 +1,39 @@
+.navbar{
+    background-color: rgb(55, 58, 84);
+}
+
+.navbar-nav{
+    font-weight: bold;
+}
+
+.nav-item{
+    margin-left: 10px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+#hamburger{
+    float: right;
+    border: none;
+}
+
+#signout{
+    border: 2px solid red;
+    border-radius: 25px;
+    padding: 2px 6px 2px 6px;
+    color: red;
+    float: right !important;
+}
+
+#signout:hover{
+    background-color: red;
+    color: white;
+}
+
+.navbar-brand img{
+    width: 65px;
+    margin-left: 30px;
+    margin-right: 20px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}

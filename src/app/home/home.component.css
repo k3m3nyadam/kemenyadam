@@ -1,0 +1,98 @@
+#carousel, .carousel-inner img{
+    max-height: 700px;
+}
+
+/* Carousel */
+
+.carousel{
+    margin-top: 70px;
+}
+
+.container-fluid{
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    background-color: rgb(55, 58, 84);
+}
+
+/* Sections */
+
+.sections{
+    color: white;
+    margin: 5px 80px 5px 80px;
+}
+
+.sections h2{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+
+.sections h2::after{
+    content: '';
+    display: block;
+    background-color: rgb(226, 0, 0);
+    width: 300px;
+    height: 3px;
+    margin: 20px auto;
+}
+
+.sections p{
+    text-align: justify;
+}
+
+#section2{
+    margin-top: 100px;
+}
+
+.card{
+    background-color: rgb(55, 58, 84);
+    box-shadow: 5px 5px 9px 0px rgb(40, 42, 61);
+    width: 48%;
+    border: none;
+    padding: 10px;
+    display: inline-block;
+    margin: 10px;
+}
+
+.card img{
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/* Socials and footer*/
+
+.social{
+    margin-top: 100px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.social::before{
+    content: '';
+    display: block;
+    background-color: rgb(40, 42, 61);
+    width: 50%;
+    height: 2px;
+    margin: 40px auto;
+}
+
+.social a{
+    color: rgb(40, 42, 61);
+    font-size: 200%;
+    padding: 10px;
+    transition: 200ms ease-in;
+}
+
+.social a:hover{
+    color: red;
+    font-size: 240%;
+}
+
+/* Media screens*/
+
+@media screen and (max-width: 1200px){
+    .card, .card img{
+        width: 100%;
+    }
+}
