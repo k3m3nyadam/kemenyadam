@@ -9,6 +9,9 @@ import { AccountService } from './_services/account.service';
 })
 
 export class AppComponent {
+  title(title: any) {
+    throw new Error('Method not implemented.');
+  }
   user: User;
 
   constructor(private accountService: AccountService){

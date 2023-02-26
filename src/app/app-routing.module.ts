@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { DriversComponent } from './drivers/drivers.component';
 import { HomeComponent } from './home/home.component';
 import { ProfileComponent } from './profile/profile.component';
 import { AuthGuard } from './_helpers/auth.guard';
@@ -9,6 +10,7 @@ const accountModule = () => import('./account/account.module').then(x => x.Accou
 const routes: Routes = [
   {path: '', component: HomeComponent, canActivate: [AuthGuard]},
   {path: 'profile', component: ProfileComponent},
+  {path: 'drivers', component: DriversComponent},
   {path: 'account', loadChildren: accountModule},
 
   {path: '**', redirectTo: ''}

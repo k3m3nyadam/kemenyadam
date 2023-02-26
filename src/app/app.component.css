@@ -12,6 +12,10 @@
     padding-top: 20px;
 }
 
+.navbar-toggler{
+    float: right !important;
+}
+
 #hamburger{
     float: right;
     border: none;
@@ -36,4 +40,5 @@
     margin-right: 20px;
     padding-bottom: 20px;
     padding-top: 20px;
+    display: inline-block;
 }
