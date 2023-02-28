@@ -6,8 +6,9 @@
     box-shadow: 5px 5px 9px 0px red;
     border-radius: 0px;
     font-weight: bold;
-    width: 70%;
-    margin-top: 20px;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 50px;
 }
 
 .card input{
@@ -55,4 +56,20 @@
 
 .invalid-feedback{
     color: red;
+}
+
+#welcome1{
+    font-size: 40px;
+    font-weight: normal;
+    color: white;
+    text-align: center;
+    margin-top: 50px;
+}
+
+#welcome2{
+    font-size: 20px;
+    font-weight: lighter;
+    color: red;
+    text-align: center;
+    margin-bottom: 50px;
 }
