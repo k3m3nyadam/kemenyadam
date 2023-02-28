@@ -10,17 +10,14 @@ import { AlertComponent } from './_components/alert.component';
 import { ErrorInterceptor } from './_helpers/error.interceptor';
 import { FakeBackendProvider } from './_helpers/fake-backend';
 import { JwtInterceptor } from './_helpers/jwt.interceptor';
+
 import { IonicModule } from '@ionic/angular';
-import { ProfileComponent } from './profile/profile.component';
-import { DriversComponent } from './drivers/drivers.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AlertComponent,
-    HomeComponent,
-    ProfileComponent,
-    DriversComponent
+    HomeComponent
   ],
   imports: [
     BrowserModule,
