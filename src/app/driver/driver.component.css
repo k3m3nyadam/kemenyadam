@@ -1,4 +1,32 @@
-.container h1{
-    color: black;
+.container-fluid h2{
+    color: white;
     font-size: 40px;
+    margin-bottom: 30px;
 }
+
+.card{
+    color: white;
+    padding: 10px;
+    background-color: inherit;
+    box-shadow: 5px 5px 9px 0px rgb(40, 42, 61);
+    border: none;
+    border-radius: 0px;
+}
+
+.card h5{
+    color: rgb(50, 176, 199);
+    margin-bottom: 30px;
+}
+
+.card p{
+    text-align: justify;
+}
+
+.card img{
+    width: 40%;
+}
+
+.inline{
+    display: inline-block;
+}
+

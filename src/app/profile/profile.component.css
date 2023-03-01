@@ -1,4 +1,96 @@
 .container-fluid h2{
-    color: black;
-    font-size: 50px;
+    color: white;
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+.container{
+    min-height: 330px;
+    padding: 15px;
+    box-shadow: 5px 5px 9px 0px red;
+}
+
+.row input{
+    margin: 0 auto;
+    margin-bottom: 50px;
+    padding: 10px;
+    width: 100%;
+    height: 50px;
+    border: none;
+    color: white;
+    background-color: inherit;
+    box-shadow: 5px 5px 9px 0px rgb(40, 42, 61);
+}
+
+.row label{
+    color: white;
+    font-weight: bold;
+}
+
+.btn-save{
+    float: right;
+    padding: 3px 12px 3px 12px;
+    font-weight: bold;
+    font-size: 110%;
+    border: 2px solid red;
+    border-radius: 5px;
+    background-color: inherit;
+    color: red;
+    transition: 200ms ease-out;
+}
+
+.btn-save:hover{
+    background-color: red;
+    color: white;
+}
+
+.delete{
+    padding: 10px;
+    margin-top: 70px;
+    height: 80px;
+    box-shadow: 5px 5px 9px 0px red;
+}
+
+.delete h6, button{
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.delete h6{
+    color: white;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.btn-delete{
+    float: right;
+    padding: 3px 12px 3px 12px;
+    height: 40px;
+    margin-top: 10px;
+    margin-right: 20px;
+    font-weight: bold;
+    color: white;
+    background-color: red;
+    border: 2px solid red;
+    border-radius: 5px;
+    transition: 200ms ease-out;
+}
+
+.btn-delete:hover{
+    color: red;
+    background-color: inherit;
+}
+
+#bold{
+    font-weight: bold;
+}
+
+#thin{
+    font-weight: lighter;
+}
+
+@media screen and (max-width: 767px){
+    .delete{
+        height: 170px;
+    } 
 }

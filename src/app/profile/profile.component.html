@@ -1,3 +1,63 @@
 <div class="container-fluid">
     <h2>My Profile</h2>
+    <form *ngIf="!loading" [formGroup]="form" (ngSubmit)="onSubmit()">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <label>First Name</label>
+                    <input type="text" formControlName="firstName" class="form-control"
+                        [ngClass]="{'is-invalid': submitted && g.firstName.errors}">
+                    <div class="invalid-feedback" *ngIf="submitted && g.firstName.errors">
+                        <div *ngIf="g.firstName.errors.required">First Name is required!</div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <label>Last Name</label>
+                    <input type="text" formControlName="lastName" class="form-control"
+                        [ngClass]="{'is-invalid': submitted && g.lastName.errors}">
+                    <div class="invalid-feedback" *ngIf="submitted && g.lastName.errors">
+                        <div *ngIf="g.lastName.errors.required">Last Name is required!</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <label>Username</label>
+                    <input type="text" formControlName="username" class="form-control"
+                        [ngClass]="{'is-invalid': submitted && g.username.errors}">
+                    <div class="invalid-feedback" *ngIf="submitted && g.username.errors">
+                        <div *ngIf="g.username.errors.required">Username is required!</div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <label>
+                        Password
+                        <em *ngIf="id">(Leave blank to keep the same password)</em>
+                    </label>
+                    <input type="text" formControlName="password" class="form-control"
+                        [ngClass]="{'is-invalid': submitted && g.password.errors}">
+                    <div class="invalid-feedback" *ngIf="submitted && g.password.errors">
+                        <div *ngIf="g.password.errors.required">Password is required!</div>
+                        <div *ngIf="g.password.errors.minlength">Password must be 8 characters!</div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <button class="btn-save" [disabled]="submitting">
+                    <span *ngIf="submitting" class="spinner-border spinner-border-sm me-1"></span>
+                    Save
+                </button>
+            </div>
+        </div>
+
+        <div class="delete">
+            <h6 id="bold">Delete account.</h6>
+            <h6 id="thin">Once you delete your account, there is no going back.</h6>
+            <button class="btn-delete">Delete</button>
+        </div>
+    </form>
 </div>

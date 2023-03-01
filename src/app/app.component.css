@@ -7,9 +7,11 @@
 }
 
 .nav-item{
-    margin-left: 10px;
+    margin-left: 20px;
     padding-bottom: 20px;
     padding-top: 20px;
+    color: white;
+    font-weight: bold;
 }
 
 .navbar-toggler{

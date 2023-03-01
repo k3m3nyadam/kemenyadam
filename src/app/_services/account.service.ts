@@ -49,4 +49,18 @@ export class AccountService{
       getById(id: string){
         return this.http.get<User>(`${environment.apiUrl}/users/${id}`);
       }
+
+      update(id: string, params: any){
+        return this.http.put(`${environment.apiUrl}/users/${id}`, params)
+          .pipe(map(x => {
+            if(id == this.userValue.id){
+              const user = {...this.userValue, ...params};
+              localStorage.setItem('user', JSON.stringify(user));
+    
+              this.userSubject.next(user);
+            }
+    
+            return x;
+          }));
+      }
 }
