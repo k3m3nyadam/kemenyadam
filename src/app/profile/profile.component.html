@@ -22,7 +22,7 @@
                 </div>
             </div>
 
-            <div class="row">
+            <div class="row" id="row2">
                 <div class="col">
                     <label>Username</label>
                     <input type="text" formControlName="username" class="form-control"
@@ -53,11 +53,16 @@
                 </button>
             </div>
         </div>
-
-        <div class="delete">
-            <h6 id="bold">Delete account.</h6>
-            <h6 id="thin">Once you delete your account, there is no going back.</h6>
-            <button class="btn-delete">Delete</button>
-        </div>
     </form>
+
+    <div class="delete">
+        <h6 id="bold">Delete account.</h6>
+        <h6 id="thin">Once you delete your account, there is no going back.</h6>
+        <div *ngFor="let user of users">
+            <button class="btn-delete" (click)="deleteUser(user.id)" [disabled]="user.isDeleting">
+                <span *ngIf="user.isDeleting" class="spinner-border spinner-border-sm"></span>
+                <span *ngIf="!user.isDeleting">Delete</span>
+            </button>
+        </div>
+    </div>
 </div>

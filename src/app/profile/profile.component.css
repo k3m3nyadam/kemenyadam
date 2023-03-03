@@ -12,7 +12,7 @@
 
 .row input{
     margin: 0 auto;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     padding: 10px;
     width: 100%;
     height: 50px;
@@ -37,6 +37,7 @@
     background-color: inherit;
     color: red;
     transition: 200ms ease-out;
+    margin-top: 20px;
 }
 
 .btn-save:hover{
@@ -81,12 +82,20 @@
     background-color: inherit;
 }
 
+.invalid-feedback{
+    margin-top: -10px;
+}
+
 #bold{
     font-weight: bold;
 }
 
 #thin{
     font-weight: lighter;
+}
+
+#row2{
+    margin-top: 30px;
 }
 
 @media screen and (max-width: 767px){

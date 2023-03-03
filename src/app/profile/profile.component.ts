@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { AccountService } from '@app/_services/account.service';
 import { AlertService } from '@app/_services/alert.service';
-
 import { first } from 'rxjs/operators';
 
 @Component({
@@ -17,6 +16,7 @@ export class ProfileComponent implements OnInit{
   loading = false;
   submitting = false;
   submitted = false;
+  users: any[];
 
   constructor(
     private formBuilder: FormBuilder,
@@ -74,5 +74,14 @@ export class ProfileComponent implements OnInit{
     return this.id 
       ? this.accountService.update(this.id, this.form.value)
       : this.accountService.register(this.form.value);
+  }
+
+  deleteUser(id: string){
+    const user = this.users.find(x => x.id === id);
+    confirm("Are you sure you want to delete this user?")
+    ? user.isDeleting = true && this.accountService.delete(id)
+      .pipe(first())
+      .subscribe(() => this.users = this.users.filter(x => x.id !== id))
+    : "";
   }
 }

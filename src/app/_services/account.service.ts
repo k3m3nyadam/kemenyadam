@@ -63,4 +63,15 @@ export class AccountService{
             return x;
           }));
       }
+
+      delete(id: string){
+        return this.http.delete(`${environment.apiUrl}/users/${id}`)
+          .pipe(map(x => {
+            if(id == this.userValue.id){
+              this.logout;
+            }
+    
+            return x;
+          }));
+      }
 }

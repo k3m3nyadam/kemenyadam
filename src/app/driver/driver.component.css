@@ -1,7 +1,11 @@
 .container-fluid h2{
     color: white;
     font-size: 40px;
-    margin-bottom: 30px;
+}
+
+.container-fluid h4{
+    color: red;
+    margin-bottom: 40px;
 }
 
 .card{
@@ -11,22 +15,65 @@
     box-shadow: 5px 5px 9px 0px rgb(40, 42, 61);
     border: none;
     border-radius: 0px;
-}
-
-.card h5{
-    color: rgb(50, 176, 199);
     margin-bottom: 30px;
 }
 
-.card p{
-    text-align: justify;
+.number{
+    text-align: center;
+    padding: 10px;
+    width: 20%;
+    color: rgb(40, 42, 61);
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 200%;
 }
 
-.card img{
-    width: 40%;
+.name{
+    width: 80%;
 }
 
-.inline{
-    display: inline-block;
+.points{
+    color: rgb(40, 42, 61);
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: right;
+    width: 20%;
 }
 
+.points h3{
+    font-size: 20px;
+}
+
+.mercedes{
+    color: rgb(50, 176, 199);
+}
+
+.ferrari{
+    color: rgb(255, 0, 0);
+}
+
+.redbull{
+    color: yellow;
+}
+
+.aston{
+    color: rgb(33, 105, 59);
+}
+
+.mclaren{
+    color: orange;
+}
+
+.alpine{
+    color: rgb(30, 40, 118);
+}
+
+.alfa{
+    color: rgb(93, 7, 7);
+}
+
+.alpha{
+    color: rgb(143, 143, 143);
+}
+
+ .williams{
+    color: rgb(90, 103, 201);
+ }
