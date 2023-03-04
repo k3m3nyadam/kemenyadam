@@ -35,7 +35,7 @@
                 <div class="col">
                     <label>
                         Password
-                        <em *ngIf="id">(Leave blank to keep the same password)</em>
+                        <em *ngIf="id" class="big">(You can leave this blank)</em>
                     </label>
                     <input type="text" formControlName="password" class="form-control"
                         [ngClass]="{'is-invalid': submitted && g.password.errors}">
@@ -44,6 +44,10 @@
                         <div *ngIf="g.password.errors.minlength">Password must be 8 characters!</div>
                     </div>
                 </div>
+            </div>
+
+            <div class="row">
+                <em *ngIf="id" class="small">(Leave password blank if you dont want to change it)</em>
             </div>
 
             <div>
@@ -56,13 +60,10 @@
     </form>
 
     <div class="delete">
-        <h6 id="bold">Delete account.</h6>
-        <h6 id="thin">Once you delete your account, there is no going back.</h6>
-        <div *ngFor="let user of users">
-            <button class="btn-delete" (click)="deleteUser(user.id)" [disabled]="user.isDeleting">
-                <span *ngIf="user.isDeleting" class="spinner-border spinner-border-sm"></span>
-                <span *ngIf="!user.isDeleting">Delete</span>
+        <h6 class="bold">Delete account.</h6>
+        <h6 class="thin">Once you delete your account, there is no going back.</h6>
+            <button class="btn-delete" (click)="deleteUser()">
+                <span>Delete</span>
             </button>
-        </div>
     </div>
 </div>

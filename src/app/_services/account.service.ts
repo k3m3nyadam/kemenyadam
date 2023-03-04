@@ -68,7 +68,7 @@ export class AccountService{
         return this.http.delete(`${environment.apiUrl}/users/${id}`)
           .pipe(map(x => {
             if(id == this.userValue.id){
-              this.logout;
+              this.logout();
             }
     
             return x;

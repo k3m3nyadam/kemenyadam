@@ -8,6 +8,7 @@
     min-height: 330px;
     padding: 15px;
     box-shadow: 5px 5px 9px 0px red;
+    margin-bottom: 70px;
 }
 
 .row input{
@@ -25,6 +26,10 @@
 .row label{
     color: white;
     font-weight: bold;
+}
+
+.col em{
+    font-weight: lighter;
 }
 
 .btn-save{
@@ -86,12 +91,16 @@
     margin-top: -10px;
 }
 
-#bold{
+.bold{
     font-weight: bold;
 }
 
-#thin{
+.thin{
     font-weight: lighter;
+}
+
+.small{
+    color: white;
 }
 
 #row2{
@@ -102,4 +111,9 @@
     .delete{
         height: 170px;
     } 
+
+    .big{
+        display: none;
+    }
+
 }

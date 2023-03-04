@@ -7,7 +7,7 @@ const routes: Routes = [
   {
     path: '', component: LayoutComponent,
     children: [
-      { path: '', component: ProfileComponent }
+      { path: 'user/:id', component: ProfileComponent }
     ]
   }
 ];
