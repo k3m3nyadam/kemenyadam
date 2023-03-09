@@ -115,5 +115,20 @@
     .big{
         display: none;
     }
+}
 
+@media screen and (min-width: 768px){
+    .small{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 503px) {
+    .btn-delete{
+        margin-top: -10px;
+    }
+
+    .btn-save{
+        margin-top: 5px;
+    }
 }
