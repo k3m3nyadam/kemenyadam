@@ -83,10 +83,4 @@ export class ProfileComponent implements OnInit{
       .subscribe(() => console.log("User deleted sucessfully"))
     : "";
   }
-
-  clearUsers(){
-    localStorage.clear();
-    this.accountService.logout();
-    this.alertService.info('Cleared all users!')
-  }
 }
